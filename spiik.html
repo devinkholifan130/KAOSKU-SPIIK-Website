@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPIIK Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="website icon" href="SPIIK GROUP Logo.png">
+    <style>
+       /* Custom Navbar Style */
+       .navbar-spiik {
+        background-color: red;
+        color: white;
+      }
+      .navbar-spiik .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+      }
+      .navbar-spiik .navbar-brand img {
+        height: 40px;
+        margin-right: 10px; /* Space between image and text */
+      }
+      .navbar-spiik .navbar-nav .nav-link {
+        color: white; /* White text */
+        font-weight: bold; /* Bold text */
+        text-align: center; /* Center text */
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+      .navbar-spiik .navbar-nav .nav-link:hover {
+        color:rgb(247, 243, 241);
+      }
+      .navbar-kaosku .navbar-nav {
+        color: gray; /* Gray color for disabled links */
+        font-weight: normal;
+      }
+
+
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .image-bg {
+        position: relative;
+        background-image: url('SPIIK Wallpaper.jpg'); /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .content-overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        padding: 20px;
+        border-radius: 10px;
+      }
+    
+
+      .content-overlay h2 {
+  color: #a01010;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.content-overlay h3 {
+  color: #fcf8f8;
+  font-size: 1.5rem;
+  text-shadow: 3px 1px black;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+      h2 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      
+  
+
+
+      .promo-section {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: #f1eaea;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+    .promo-section img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .promo-section h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #790909; /* Warna teks promosi */
+      margin-bottom: 1rem;
+    }
+
+
+    .promo-section .spiik-button {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #aa0d0d;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .promo-section .spiik-button:hover {
+      background-color: #aa0d0d;
+    }
+
+    /* Footer-like section */
+    .footer-section {
+      background-color: #f8f9fa;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .footer-section h5 {
+      margin: 0;
+      font-weight: bold;
+      color: rgb(141, 8, 8);
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Zoom effect on hover */
+    }
+
+    .card img {
+      border-radius: 50%;
+      max-width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+
+    .container {
+      margin-top: 1.5rem;
+    }
+
+    /* Footer Container */
+    .footer {
+      background-color: #a10a0a;
+      color: #f8f1e7; /* Light beige */
+      padding: 2rem 0;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      border-top: 4px solid #faf8f6;
+    }
+
+    /* Footer Logo */
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #f8f1e7;
+      text-transform: uppercase;
+    }
+
+    /* Footer Links */
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+      color: #f0eeeb;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #f8f1e7; /* Light beige on hover */
+    }
+
+   /* Footer Social Media Icons */
+.footer-social-media {
+  text-align: center; /* Pusatkan semua ikon */
+  margin-bottom: 1.5rem; /* Tambahkan spasi ke bawah */
+}
+
+.footer-social-media a {
+  color: #f8f1e7; /* Warna ikon default */
+  font-size: 1.2rem; /* Ukuran font ikon Twitter */
+  margin: 0 0.6rem; /* Jarak antar ikon */
+  text-decoration: none; /* Hilangkan underline */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-media a:hover {
+  transform: scale(1.1); /* Sedikit perbesar pada hover */
+  color: #c19a6b; /* Warna efek hover */
+}
+
+/* Ukuran gambar ikon */
+.footer-social-media .social-icon {
+  width: 52px; /* Ukuran ikon gambar */
+  height: auto; /* Pertahankan aspek rasio */
+  margin: 0 0.6rem; /* Jarak antar gambar */
+  transition: transform 0.3s ease;
+}
+
+.footer-social-media .social-icon:hover {
+  transform: scale(1.1); /* Sedikit perbesar pada hover */
+}
+
+    /* Footer Bottom Text */
+    .footer-bottom {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #f5f2f0;
+    }
+    </style>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg navbar-spiik">
+      <div class="container-fluid">
+        <!-- Brand with Image -->
+        <a class="navbar-brand" href="#">
+          <img src="SPIIK Logo.png" alt="SPIIK Logo"> SPIIK
+        </a>
+        <!-- Navbar Toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="kaosku.html">KAOSKU Interface</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="spiik.html">SPIIK Interface</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Main Section -->
+     <div class="image-bg">
+        <div class="content-overlay">
+            <h2>WELCOME TO SPIIK</h2>
+            <h3>Kaus dan Jaket lokal dari SETYOWATI GROUP Purwokerto</h3>
+        </div>
+     </div>
+
+
+     <div class="promo-section">
+        <!-- Gambar di atas tombol -->
+        <img src="SPIIK Logo.png" alt="SPIIK Logo">
+        <h4>Ingin kaus dan jaket terbaik? Belilah di SPIIK dari SETYOWATI GROUP Marketplace</h4>
+        <a href="spiikgallery.html" class="spiik-button">ALL SPIIK GALLERY</a>
+    </div>
+    </div>
+  
+  <!-- Footer-like Section -->
+  <div class="footer-section">
+    <h5>KHUSUS CUSTOMER, ANDA BISA MEMILIH DARI DUA MENU TERSEBUT!</h5>
+    <h5>DIJAMIN KAUS/JAKET YANG ANDA INGINKAN BERKUALITAS TERBAIK, TERKINI, DAN HARGA TERJANGKAU!</h5>
+  </div>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <!-- KAOSKU Best Shirt -->
+      <div class="col-md-4 text-center">
+        <div class="card shadow p-3">
+          <a href="spiikbestshirt.html">
+            <img src="SPIIK Logo 2.jpg" alt="SPIIK Best Shirt" class="img-fluid">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">SPIIK Best Shirt</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- KAOSKU Best Jersey -->
+      <div class="col-md-4 text-center">
+        <div class="card shadow p-3">
+          <a href="spiikbestjacket.html">
+            <img src="SPIIK Logo 3.jpg" alt="SPIIK Best Jacket" class="img-fluid">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">SPIIK Best Jacket</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   
+ <!-- Footer Section -->
+ <footer class="footer">
+  <!-- Footer Logo -->
+  <div class="footer-logo">SETYOWATI GROUP SPIIK</div>
+
+  <!-- Footer Links -->
+  <div class="footer-links">
+    <a href="tentangspiik.html">About Us</a>
+    <a href="spiikgallery.html">Gallery</a>
+    <a href="https://wa.me/628112788223">Contact</a>
+  </div>
+
+
+<!-- Footer Social Media -->
+<div class="footer-social-media">
+  <a href="https://www.instagram.com/setyowatigroup/" target="_blank">
+    <img src="Instagram Logo.png" alt="Instagram Logo" class="social-icon">
+  </a>
+  <a href="https://www.youtube.com/channel/SETYOWATIGROUP" target="_blank">
+    <img src="YouTube Icon 2.png" alt="YouTube Logo" class="social-icon">
+  </a>
+  <a href="https://twitter.com/setyowatigroup" target="_blank">
+    <i class="bi bi-twitter social-icon"></i>
+  </a>
+</div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    &copy; 2025 Setyowati Group Spiik. All rights reserved.
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

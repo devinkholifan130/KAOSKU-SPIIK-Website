@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KAOSKU Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="website icon" href="SETYOWATI GROUP Logo.png">
+    <style>
+       /* Custom Navbar Style */
+       .navbar-kaosku {
+        background-color: #000;
+        color: #c19a6b;
+      }
+      .navbar-kaosku .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #c19a6b;
+      }
+      .navbar-kaosku .navbar-brand img {
+        height: 40px;
+        margin-right: 10px; /* Space between image and text */
+      }
+      .navbar-kaosku .navbar-nav .nav-link {
+        color: #c19a6b;
+        font-weight: bold; /* Bold text */
+        text-align: center; /* Center text */
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+      .navbar-kaosku .navbar-nav .nav-link:hover {
+        color:rgb(187, 116, 70);
+      }
+      .navbar-kaosku .navbar-nav .nav-link.disabled {
+        color: gray; /* Gray color for disabled links */
+        font-weight: normal;
+      }
+
+
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .image-bg {
+        position: relative;
+        background-image: url('Setyowati Jersey Wallpaper.jpg'); /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .content-overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        padding: 20px;
+        border-radius: 10px;
+      }
+    
+
+      .content-overlay h2 {
+  color: #D7B49E; /* Kremer kopi */
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.content-overlay h3 {
+  color: #B08968; /* Soft coffee */
+  font-size: 1.5rem;
+  text-shadow: 3px 1px black;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+      h2 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      
+  
+
+
+      .promo-section {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+    .promo-section img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .promo-section h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000000; /* Warna teks promosi */
+      margin-bottom: 1rem;
+    }
+
+
+    .promo-section .kaosku-button {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #c19a6b;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .promo-section .kaosku-button:hover {
+      background-color: #c19a6b;
+    }
+
+    /* Footer-like section */
+    .footer-section {
+      background-color: #f8f9fa;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .footer-section h5 {
+      margin: 0;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Zoom effect on hover */
+    }
+
+    .card img {
+      border-radius: 50%;
+      max-width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .hero-section {
+      background-color:rgb(5, 5, 5); /* Warna latar belakang */
+      color: #fff; /* Warna teks */
+      padding: 2rem 0; /* Padding atas dan bawah */
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    }
+
+    .hero-section h4 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .map-container {
+      display: flex;
+      justify-content: center; /* Memusatkan iframe */
+      margin-top: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 1100px; /* Lebar maksimum */
+      height: 500px;
+      border: 0;
+      border-radius: 10px; /* Membuat sudut membulat */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    }
+
+    .container {
+      margin-top: 1.5rem;
+    }
+
+    .social-media-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background-color: #f8f9fa; /* Warna latar belakang */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    }
+
+    .social-media {
+      text-align: center;
+      flex: 1;
+    }
+
+    .social-media h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .social-media a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .social-media-icon {
+      font-size: 4rem;
+      color: #333;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-media-icon:hover {
+      transform: scale(1.1);
+      color: #d02760; /* Warna hover (Instagram: pink) */
+    }
+
+    .social-media-icon.youtube:hover {
+      color: #ff0000; /* Warna hover (YouTube: merah) */
+    }
+
+    .social-media:nth-child(1) {
+      margin-right: 2rem; /* Jarak antara Instagram dan YouTube */
+    }
+
+    .social-media:nth-child(2) {
+      margin-left: 2rem;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .social-media-container {
+        flex-direction: column;
+      }
+
+      .social-media {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    /* Footer Container */
+    .footer {
+      background-color: #3e2c1b; /* Coffee brown */
+      color: #f8f1e7; /* Light beige */
+      padding: 2rem 0;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      border-top: 4px solid #c19a6b; /* Light coffee border */
+    }
+
+    /* Footer Logo */
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #f8f1e7;
+      text-transform: uppercase;
+    }
+
+    /* Footer Links */
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+      color: #c19a6b; /* Coffee cream */
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #f8f1e7; /* Light beige on hover */
+    }
+
+    /* Footer Social Media Icons */
+    .footer-social-media {
+      margin-bottom: 1rem;
+    }
+
+    .footer-social-media a {
+      color: #f8f1e7;
+      font-size: 1.5rem;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .footer-social-media a:hover {
+      transform: scale(1.1);
+      color: #c19a6b;
+    }
+
+    /* Footer Bottom Text */
+    .footer-bottom {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #c7b299; /* Muted coffee tone */
+    }
+    </style>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg navbar-kaosku">
+      <div class="container-fluid">
+        <!-- Brand with Image -->
+        <a class="navbar-brand" href="#">
+          <img src="KAOSKU Logo.png" alt="KAOSKU Logo"> KAOSKU
+        </a>
+        <!-- Navbar Toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="kaosku.html">KAOSKU Interface</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="spiik.html">SPIIK Interface</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Main Section -->
+     <div class="image-bg">
+        <div class="content-overlay">
+            <h2>WELCOME TO KAOSKU</h2>
+            <h3>Kaus dan Jersey lokal dari SETYOWATI GROUP Purwokerto</h3>
+        </div>
+     </div>
+
+
+     <div class="promo-section">
+        <!-- Gambar di atas tombol -->
+        <img src="KAOSKU Logo.png" alt="KAOSKU Logo">
+        <h4>Ingin kaus dan jersey terbaik? Belilah di KAOSKU dari SETYOWATI GROUP Marketplace</h4>
+        <a href="kaoskugallery.html" class="kaosku-button">ALL KAOSKU GALLERY</a>
+    </div>
+    </div>
+  
+  <!-- Footer-like Section -->
+  <div class="footer-section">
+    <h5>KHUSUS CUSTOMER, ANDA BISA MEMILIH DARI DUA MENU TERSEBUT!</h5>
+    <h5>DIJAMIN KAUS/JERSEY YANG ANDA INGINKAN BERKUALITAS TERBAIK, TERKINI, DAN HARGA TERJANGKAU!</h5>
+  </div>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <!-- KAOSKU Best Shirt -->
+      <div class="col-md-4 text-center">
+        <div class="card shadow p-3">
+          <a href="kaoskubestshirt.html">
+            <img src="KAOSKU Logo 2.jpg" alt="KAOSKU Best Shirt" class="img-fluid">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">KAOSKU Best Shirt</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- KAOSKU Best Jersey -->
+      <div class="col-md-4 text-center">
+        <div class="card shadow p-3">
+          <a href="kaoskubestjersey.html">
+            <img src="KAOSKU Logo 3.jpg" alt="KAOSKU Best Jersey" class="img-fluid">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">KAOSKU Best Jersey</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Hero Section -->
+   <div class="hero-section">
+    <h4>LOKASI SETYOWATI GROUP</h4>
+  </div>
+
+  <!-- Map Section -->
+  <div class="container">
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.3697183674844!2d109.21785637379914!3d-7.424272973129348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e6ee0815923%3A0x2b63e1a49c3a5e57!2sSetyowati%20Printing%20Jersey!5e0!3m2!1sid!2sid!4v1737271300713!5m2!1sid!2sid" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <h4>UNTUK POSTINGAN DAN KONTEN SETYOWATI GROUP, KALIAN BISA FOLLOW INSTAGRAM & YOUTUBE KAMI
+  </h4>
+</div>
+
+<!-- Social Media Section -->
+<div class="social-media-container">
+  <!-- Instagram -->
+  <div class="social-media">
+    <a href="https://www.instagram.com/setyowatigroup/" target="_blank">
+      <img src="Instagram Logo.png" alt="Instagram Logo">
+      <h3>SETYOWATI GROUP'S INSTAGRAM</h3>
+    </a>
+  </div>
+
+  <!-- YouTube -->
+  <div class="social-media">
+    <a href="https://www.youtube.com/channel/SETYOWATIGROUP" target="_blank">
+      <img src="YouTube Icon 2.png" alt="Youtube Logo">
+      <h3>SETYOWATI GROUP'S YOUTUBE</h3>
+    </a>
+  </div>
+</div>
+
+ <!-- Footer Section -->
+ <footer class="footer">
+  <!-- Footer Logo -->
+  <div class="footer-logo">SETYOWATI GROUP KAOSKU</div>
+
+  <!-- Footer Links -->
+  <div class="footer-links">
+    <a href="tentangkaosku.html">About Us</a>
+    <a href="kaoskugallery.html">Gallery</a>
+    <a href="https://wa.me/628112788223">Contact</a>
+  </div>
+
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    &copy; 2025 Setyowati Group Kaosku. All rights reserved.
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
